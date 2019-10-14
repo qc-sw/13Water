@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    background: rgba(23, 23, 23);
+}
+
+.bg {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    color: darkgrey;
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    margin-top:10%;
+    align-items:center;
+}
+.container img{
+    width:500px;
+    margin-bottom:50px;
+    flex-shrink: 0;
+}
+.checkbox input{
+    width: 20px;
+    height: 15px;
+    margin-top: 3px;
+}
+.form-control{
+    width:400px;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,14 @@
     <title>13Water</title>
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/bootstrap.js"></script>
+    <script src="../js/all.js"></script>
     <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
     <div class="bg">
-        <div class="banner"></div>
+        <div class="banner"><img alt="" src="../src/welcome.jpg"></div>
         <div class="container">
             <div class="left">
                 <img alt="" src="../src/logo.png">
@@ -21,14 +25,38 @@
                 </p>
             </div>
             <div class="right">
-                <a href="./login.html"><p>点击注册立送888美元 可提现</p></a>
-                <img alt="" src="../src/1.png">
-                <form>
-                    <div class="left" style="">
-                        <input type="text">
-                        <input type="password"> 
+                <a href="./register.html" style="margin: 5px 0 5px;">
+                    <div class="text-effect">
+                        <span>点</span>
+                        <span>击</span>
+                        <span>立</span>
+                        <span>送</span>
+                        <span>888</span>
+                        <span>美</span>
+                        <span>元</span>
+                        <span>&nbsp;</span>
+                        <span>可</span>
+                        <span>提</span>
+                        <span>现</span>
                     </div>
-                    <button text="十三水 启动" class="login" id="login">
+                </a>
+                <img alt="" src="../src/1.png">
+                <form role="form" methods="post" id="login_form">
+                    <div class="form-group">
+                        <!-- <label for="name">用户名</label> -->
+                        <input type="text" name="username" class="form-control" required id="name" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="password">密码</label> -->
+                        <input type="password" name="password" class="form-control" required id="password"
+                            placeholder="密码">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input id="login_check" type="checkbox" required>我已阅读相关并遵守相关规定
+                        </label>
+                    </div>
+                    <input type="button" class="btn btn-default" onclick="begin()" value="十三水启动！"></button>
                 </form>
             </div>
         </div>
@@ -37,7 +65,14 @@
         </div>
     </div>
 </body>
-<style>
+<script>
+    // $(function () {
+    //     //防止页面后退
+    //     history.pushState(null, null, document.URL);
+    //     window.addEventListener('popstate', function () {
+    //         history.pushState(null, null, document.URL);
+    //     });
+    // })
+</script>
 
-</style>
 </html>
