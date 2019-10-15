@@ -10,6 +10,12 @@
 ###开发环境
 <strong>python后端+web前端</strong>
 
+###运行环境
+windows
+
+###编译方法
+无需编译
+
 ###项目结构简介
 ```
 13water.
