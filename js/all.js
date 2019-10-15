@@ -126,7 +126,7 @@ function game() {
             document.getElementsByTagName("title")[0].innerText = '游戏中...等待出牌';
             localStorage.setItem('id', data.data.id);
             localStorage.setItem('card', data.data.card);
-            window.location.href="./game.html";
+            window.location.href = "./game.html";
         },
         error: (err) => {
             alert("开局失败");
@@ -142,10 +142,9 @@ function submit() {
     var demo = document.getElementById("AI");
 
     if (demo.innerText == "AI分析出牌") {
-        demo.className = "submit_clicked";
         var submit_data = {
             "id": localStorage.id,
-            "card": localStorage.card 
+            "card": localStorage.card
         }//todo
         console.log(JSON.stringify(submit_data));
         $.ajax({
@@ -155,7 +154,17 @@ function submit() {
             type: "POST",
             dataType: "json",
             url: "https://api.shisanshui.rtxux.xyz/game/submit",
-            data: JSON.stringify(submit_data), //提交的数据
+            // data: JSON.stringify(submit_data), //提交的数据todo
+            data: JSON.stringify(
+                {
+                    "id": 12916,
+                    "card": [
+                        "#10 *3 *J",
+                        "&4 &6 #A #5 #8",
+                        "$K $A $9 $8 $2"
+                    ]
+                }
+            ), //提交的数据todo
             contentType: "application/json;charset-UTF-8",
             success: function (result) {
                 console.log(result); //打印服务端返回的数据(调试用)
@@ -168,13 +177,14 @@ function submit() {
                 alert("出牌失败");
             }
         })
+        demo.className = "submit_clicked";
         document.getElementById("AI").innerHTML = "回到主菜单";
-        document.getElementById("card").className="card_click"
+        document.getElementById("card").className = "card_click"
     }
-    else{
-        window.location.href="./menu.html";
+    else {
+        window.location.href = "./menu.html";
     }
-    
+
 }
 
 function history() {
@@ -184,19 +194,15 @@ function history() {
 
 function rank() {
     $.ajax({
-        headers: {
-            "X-Auth-Token": localStorage.token//此处放置请求到的用户token
-        },
-        type: "POST",
-        dataType: "json",
-        url: "https://api.shisanshui.rtxux.xyz/game/submit",
-        data: JSON.stringify(submit_data), //提交的数据
+        type: "GET",
+        url: "https://api.shisanshui.rtxux.xyz/rank",
         contentType: "application/json;charset-UTF-8",
         success: function (result) {
-            console.log(result); //打印服务端返回的数据(调试用)
-            if (result.status == 0) {
-                console.log("出牌成功")
-            };
+            for (var i = 0; i < 5; i++) {
+                document.getElementById("name" + i).innerText = result[i].name;
+                document.getElementById("score" + i).innerText = result[i].score;
+            }
+            $('<div>').appendTo('body').addClass('alert alert-success').html('排行榜获取成功').show().delay(1500).fadeOut();
         },
         error: function (res) {
             console.log(res);
