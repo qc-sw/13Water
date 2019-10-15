@@ -136,7 +136,16 @@ body {
         /* text-shadow: 0 0 80px Red, 0 0 30px orange, 0 0 6px DarkRed; */
     }
 }
-
+.end{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.end img{
+    width:100%;
+    height: auto;
+}
 @media only screen and (max-width: 990px) {
     .text-effect {
         font-size: 20px;
