@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -30,7 +34,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .left {
@@ -43,27 +47,30 @@ body {
 }
 
 .left p {
-    margin-top:20px;
+    margin-top: 20px;
     color: white;
     font-size: 1.5rem;
 }
-.right{
-    width:30%;
-    margin-top:2rem;
+
+.right {
+    width: 30%;
+    margin-top: 2rem;
 }
-.right form{
-    color:darkgray;
+
+.right form {
+    color: darkgray;
 }
+
 .text-effect {
     color: rgb(255, 2, 2);
     font-family: 'Monoton', cursive;
-    font-size:26px;
+    font-size: 26px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     /* margin: 0 auto; */
     display: flex;
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     position: relative;
 }
 
@@ -115,12 +122,15 @@ body {
     0% {
         opacity: 0.2;
     }
-    25%{
-        opacity:1;
+
+    25% {
+        opacity: 1;
     }
-    75%{
-        opacity:1;
+
+    75% {
+        opacity: 1;
     }
+
     100% {
         opacity: 0.2;
         /* text-shadow: 0 0 80px Red, 0 0 30px orange, 0 0 6px DarkRed; */
@@ -132,6 +142,7 @@ body {
         font-size: 20px;
     }
 }
+
 /* 
 @media only screen and (max-width: 767px) {
     .text-effect {
