@@ -5,7 +5,7 @@
 
 ##本地部署
 控制台输入 `git clone https://github.com/vjudge0913/13Water.git`
-进入根目录用谷歌浏览器打开index.html文件即可，或直接使用app.exe
+进入根目录用谷歌浏览器打开index.html文件即可，或直接使用13water.exe
 
 ###开发环境
 <strong>python后端+web前端</strong>
