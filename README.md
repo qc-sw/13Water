@@ -3,6 +3,13 @@
 
 <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg" alt="996.icu" /></a>
 
+## 运行环境
+chrome浏览器
+## 编译方法
+无需编译
+## 使用方法
+html直接用浏览器打开即可
+
 ##本地部署
 控制台输入 `git clone https://github.com/vjudge0913/13Water.git`
 进入根目录用谷歌浏览器打开index.html文件即可，或直接使用13water.exe
